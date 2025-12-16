@@ -1,66 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yash Chauhan | Web Developer</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yash Chauhan | Frontend Developer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- NAV -->
+  <nav>
+    <h2>YC</h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <!-- HERO -->
   <section class="hero">
-    <h1>Hi, I'm Yash Chauhan 👋</h1>
-    <p>Frontend Web Developer</p>
-    <a href="#projects" class="btn">View My Work</a>
+    <h1 class="fade-in">Hi, I'm <span>Yash</span></h1>
+    <p class="slide-up">Frontend Developer • UI Focused • Detail Obsessed</p>
+    <a href="#projects" class="btn glow">View Projects</a>
   </section>
 
   <!-- ABOUT -->
-  <section class="about">
+  <section id="about" class="section reveal">
     <h2>About Me</h2>
     <p>
-      I’m a passionate frontend developer learning HTML, CSS, and JavaScript.
-      I love building clean, responsive websites and improving user experience.
+      I build modern, responsive, and animated web interfaces using HTML, CSS,
+      and JavaScript. I focus on clean design, performance, and user experience.
     </p>
   </section>
 
   <!-- SKILLS -->
-  <section class="skills">
+  <section id="skills" class="section reveal">
     <h2>Skills</h2>
-    <ul>
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>Responsive Design</li>
-      <li>Basic JavaScript</li>
-      <li>Git & GitHub</li>
-    </ul>
+    <div class="skills-grid">
+      <span>HTML5</span>
+      <span>CSS3</span>
+      <span>JavaScript</span>
+      <span>Responsive Design</span>
+      <span>Git & GitHub</span>
+      <span>UI/UX Basics</span>
+    </div>
   </section>
 
   <!-- PROJECTS -->
-  <section class="projects" id="projects">
+  <section id="projects" class="section reveal">
     <h2>Projects</h2>
+    <div class="projects-grid">
 
-    <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <p>Personal responsive portfolio using HTML & CSS.</p>
-      <a href="#">Live Demo</a>
-    </div>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Animated personal portfolio with dark UI.</p>
+        <a href="#">Live Demo →</a>
+      </div>
 
-    <div class="project-card">
-      <h3>Landing Page</h3>
-      <p>Modern product landing page design.</p>
-      <a href="#">Live Demo</a>
-    </div>
+      <div class="project-card">
+        <h3>Landing Page</h3>
+        <p>High-conversion responsive landing page.</p>
+        <a href="#">Live Demo →</a>
+      </div>
 
-    <div class="project-card">
-      <h3>To-Do App</h3>
-      <p>Simple to-do list using JavaScript.</p>
-      <a href="#">Live Demo</a>
+      <div class="project-card">
+        <h3>To-Do App</h3>
+        <p>JavaScript based task manager.</p>
+        <a href="#">Live Demo →</a>
+      </div>
+
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="contact">
+  <section id="contact" class="section reveal">
     <h2>Contact</h2>
     <p>Email: yash@email.com</p>
     <p>GitHub: github.com/yashchauhan</p>
@@ -70,6 +85,19 @@
   <footer>
     <p>© 2025 Yash Chauhan</p>
   </footer>
+
+<script>
+  // Scroll Reveal Animation
+  const reveals = document.querySelectorAll('.reveal');
+  window.addEventListener('scroll', () => {
+    reveals.forEach(section => {
+      const top = section.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        section.classList.add('active');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
